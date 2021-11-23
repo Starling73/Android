@@ -4,125 +4,130 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:orientation="horizontal">-->
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+<!--        <RadioGroup-->
+<!--            android:id="@+id/radioGroup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:orientation="vertical">-->
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
+<!--            <RadioButton-->
+<!--                android:id="@+id/radio_red"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/FICT" />-->
 
-            <RadioButton
-                android:id="@+id/radio_red"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/FICT" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/radio_blue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/FAM" />-->
 
-            <RadioButton
-                android:id="@+id/radio_blue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/FAM" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/radio_green"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/HPF" />-->
 
-            <RadioButton
-                android:id="@+id/radio_green"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/HPF" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/radio_gray"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/FPM" />-->
+<!--            &lt;!&ndash;            android:checked="true" &ndash;&gt;-->
 
-            <RadioButton
-                android:id="@+id/radio_gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/FPM" />
-            <!--            android:checked="true" -->
+<!--        </RadioGroup>-->
 
-        </RadioGroup>
+<!--        <RadioGroup-->
+<!--            android:id="@+id/radioGroup2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:orientation="vertical">-->
 
-        <RadioGroup
-            android:id="@+id/radioGroup2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
+<!--            <RadioButton-->
+<!--                android:id="@+id/group"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/grade1" />-->
 
-            <RadioButton
-                android:id="@+id/group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/grade1" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/group_92"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/grade2" />-->
 
-            <RadioButton
-                android:id="@+id/group_92"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/grade2" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/group_93"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/grade3" />-->
 
-            <RadioButton
-                android:id="@+id/group_93"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/grade3" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/group_94"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/grade4" />-->
+<!--            &lt;!&ndash;            android:checked="true" &ndash;&gt;-->
 
-            <RadioButton
-                android:id="@+id/group_94"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/grade4" />
-            <!--            android:checked="true" -->
+<!--        </RadioGroup>-->
+<!--    </LinearLayout>-->
 
-        </RadioGroup>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:orientation="horizontal">-->
+<!--        <Button-->
+<!--            android:id="@+id/button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/ok" />-->
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cancel" />
+<!--        <Button-->
+<!--            android:id="@+id/button2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/cancel" />-->
 
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/empty" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="@string/empty" />-->
 
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="164dp">
+
+    </FrameLayout>
 </LinearLayout>
