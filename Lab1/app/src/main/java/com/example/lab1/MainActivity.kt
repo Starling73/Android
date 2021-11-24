@@ -7,45 +7,31 @@ import android.widget.TextView
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.lab1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
+    private val dataModel: DataModel by viewModels()
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        openFrag(R.id.place_holder, BlankFragment.newInstance())
+        openFrag(R.id.place_holder2, BlankFragment2.newInstance())
+
+
+    }
+
+    private fun openFrag(idHolder: Int, f: Fragment) {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.place_holder, BlankFragment.newInstance())
+            .replace(idHolder, f)
             .commit()
-////
-////        val textView = findViewById<TextView>(R.id.textView)
-////        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-////        val radioGroup2 = findViewById<RadioGroup>(R.id.radioGroup2)
-////        val button1 = findViewById<Button>(R.id.button)
-////        val button2 = findViewById<Button>(R.id.button2)
-//////        FragmentManager fragmentManager = getFragmentManager();
-//
-//
-//
-//        button1.setOnClickListener {
-//            val checkedRadioButtonId = radioGroup.checkedRadioButtonId
-//            val checkedRadioButton2Id = radioGroup2.checkedRadioButtonId
-//
-//            when (checkedRadioButtonId or checkedRadioButton2Id) {
-//                -1 -> textView.text = "Ничего не выбрано"
-//                else -> {
-//                    val selectedRadioButton = findViewById<RadioButton>(checkedRadioButtonId)
-//                    val selectedRadioButton2 = findViewById<RadioButton>(checkedRadioButton2Id)
-//                    textView.text =
-//                        selectedRadioButton.text.toString() + " " + selectedRadioButton2.text.toString()
-//                }
-//            }
-//        }
-//        button2.setOnClickListener {
-//            textView.text = ""
-//        }
-
     }
 }

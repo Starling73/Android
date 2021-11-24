@@ -5,36 +5,66 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.fragment.app.activityViewModels
+import com.example.lab1.databinding.Fragment1Binding
 
-//// TODO: Rename parameter arguments, choose names that match
-//// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BlankFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BlankFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-//    private var param1: String? = null
-//    private var param2: String? = null
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-//        }
-//    }
+    private val dataModel: DataModel by activityViewModels()
+    lateinit var binding: Fragment1Binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false)
+        binding = Fragment1Binding.inflate(inflater)
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.button4.setOnClickListener {
+            val checkedRadioButtonId = binding.radioGroup.checkedRadioButtonId
+            val checkedRadioButton2Id = binding.radioGroup2.checkedRadioButtonId
+            var selectedRadioButton: String
+            var selectedRadioButton2: String
+
+            when (checkedRadioButtonId or checkedRadioButton2Id) {
+                -1 -> dataModel.message.value = "Ничего не выбрано"
+                else -> {
+                    val numbers: Array<RadioButton> = arrayOf(
+                        binding.radioBlue,
+                        binding.radioGreen,
+                        binding.radioGray,
+                        binding.radioRed
+                    )
+
+                    val numbers2: Array<RadioButton> = arrayOf(
+                        binding.group,
+                        binding.group92,
+                        binding.group93,
+                        binding.group94
+                    )
+
+
+                    for (n in numbers) {
+                        for (m in numbers2) {
+                            if (n.id == checkedRadioButtonId) {
+                                if (m.id == checkedRadioButton2Id) {
+                                    selectedRadioButton = n.text.toString()
+                                    selectedRadioButton2 = m.text.toString()
+                                    dataModel.message.value =
+                                        selectedRadioButton + " " + selectedRadioButton2
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
     }
 
     companion object {
